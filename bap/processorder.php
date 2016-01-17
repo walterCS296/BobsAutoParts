@@ -92,8 +92,8 @@
 				// 	.$sparkqty." spark plugs\t\$".$totalamount
 				// 	."\t". $address. $foundUs."\n";
 				
-			$outputstring = "$date\t $tireqty tires\t $oilqty oil\t $sparkqty 
-			                spark plugs\t $$totalamount\t $address\t $foundUs\n";
+			$outputstring = "$date\t $tireqty tires\t $oilqty oil\t $sparkqty spark plugs\t $"
+			                .number_format($totalamount,2)."\t $address\t $foundUs\n";
 					
 			echo "<p>$outputstring</p>";
 			

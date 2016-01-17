@@ -6,7 +6,7 @@
   $address = $_POST['address'];
   $find = $_POST['find'];
   $date = date('H:i, jS F Y');
-  $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+  //$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 ?>
 <html>
     <head>
@@ -92,23 +92,23 @@
 				// 	.$sparkqty." spark plugs\t\$".$totalamount
 				// 	."\t". $address. $foundUs."\n";
 				
-			$outputstring = "$date\t $tireqty tires\t $oilqty oil\t $sparkqty spark plugs\t $$totalamount\t $address\t $foundUs\n";
+			$outputstring = "$date\t $tireqty tires\t $oilqty oil\t $sparkqty 
+			                spark plugs\t $$totalamount\t $address\t $foundUs\n";
 					
 			echo "<p>$outputstring</p>";
 			
 			// open file for appending
-	        @ $fp = fopen("$DOCUMENT_ROOT/../orders/orders.txt", 'ab');
-	        
-	        flock($fp, LOCK_EX);
+	        @ $fp = fopen("../orders/orders.txt", 'ab');// "@" supresses PHP errors
 
-        	if (!$fp) {
+        	if (!$fp) { //escapes all subsequent processing if orders.txt is not open
         	  echo "<p><strong> Your order could not be processed at this time.
         		    Please try again later.</strong></p>";
         	  exit;
         	}
         
+        	flock($fp, LOCK_EX); // lock file for writing
         	fwrite($fp, $outputstring, strlen($outputstring));
-        	flock($fp, LOCK_UN);
+        	flock($fp, LOCK_UN); // release write lock
         	fclose($fp);
         
         	echo "<p>Order written.</p>";

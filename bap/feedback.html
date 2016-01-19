@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Bob's Auto Parts - Customer Feedback</title>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+    </head>
+    <body>
+        <div id="bapBox">
+            <a href="bobs_front_page.php">
+                <img id="bap" src="images/BobsLogo.png" height="88" width="238"/>
+            </a>
+        </div>
+        <h1>Customer Feedback</h1>
+        <p>Please tell us what you think.</p>
+        
+        <form action="processfeedback.php" method="post">
+        
+            <p>Your name:<br/>
+            <input type="text" name="name" size="40" /></p>
+                 
+            <p>Your email address:<br/>
+            <input type="email" name="email" size="40" /></p>
+                 
+            <p>Your feedback:<br/>
+            <textarea name="feedback" rows="8" cols="40" wrap="virtual" /></textarea></p>
+                 
+            <p>
+                <input type="submit" value="Send feedback" />
+                <input type="submit" formaction="processfeedback_v2.php" value="Send feedback v2" />
+            </p>
+        
+        </form>
+    
+        <!--<script src="scripts/BobsFunctionality.js"></script>-->
+    </body>
+</html>

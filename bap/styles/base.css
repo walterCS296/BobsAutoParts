@@ -1,0 +1,73 @@
+/*base.css*/
+
+html {
+    /*font-size: 16px;*/
+    background: #404040;
+    padding-top: 40px;
+}
+
+body {
+    background: white;
+    width: 95%;
+    max-width: 870px;
+    margin: auto;
+    border: solid 3px;
+    padding: 15px;
+    min-height: 666px;
+}
+
+#bapBox {
+    width: 100%;
+    position: relative;
+    margin-top: -32px;
+    margin-bottom: 14px;
+}
+
+#bap {
+    margin: auto;
+    position: relative;
+    left: 35%;
+}
+
+th, td {
+    padding: 7px;
+}
+
+nav {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #0098dc;
+}
+
+nav li {
+	display: inline-block;
+	width: 203px;
+	background-color: #0098dc;
+	margin: 0;
+	padding: 7px;
+	transition: .3s background-color;
+}
+
+li a, li a:visited {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: .3s color;
+}
+
+nav li:hover {
+    background-color: #71badb;
+    transition: .3s background-color;
+}
+
+nav li a:hover {
+    color: black;
+    transition: .3s color;
+}

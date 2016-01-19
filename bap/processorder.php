@@ -11,9 +11,16 @@
 <html>
     <head>
         <title>Bob's Auto Parts - Order Results</title>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
     </head>
     <body>
-        <h1>Bob's Auto Parts</h1>
+        <!--<h1>Bob's Auto Parts</h1>-->
+        <div id="bapBox">
+            <a href="bobs_front_page.php">
+                <img id="bap" src="images/BobsLogo.png" height="88" width="238"/>
+            </a>
+        </div>
         <h2>Order Results</h2>
         <?php
             echo "<p>Order processed at ";
